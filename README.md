@@ -1,3 +1,33 @@
+# Testing
+
+$ sudo docker pull onceltuca/trilearn
+
+$ sudo docker run -it onceltuca/trilearn
+
+In another terminal 
+
+$ sudo docker ps -a # to check the id of the running container
+
+$ sudo docker inspect container_id
+
+Note the ip address of the container from "IPAddress":
+
+Inside the container 
+
+$ mkdir /root/.jupyter
+
+$ $ git clone https://github.com/manmeet3591/trilearn/
+
+$ jupyter notebook --ip=0.0.0.0 --allow-root &
+
+In the browser on the machine 
+
+$ https://(ip_address_of_container):port
+
+$ Start the notebook example_structure_learning.ipynb
+
+Success!
+
 ![GitHub](https://img.shields.io/github/license/felixleopoldo/trilearn)
 ![PyPI](https://img.shields.io/pypi/v/trilearn)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/trilearn)
